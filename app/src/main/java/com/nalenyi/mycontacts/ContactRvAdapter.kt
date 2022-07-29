@@ -12,6 +12,8 @@ import com.nalenyi.mycontacts.databinding.ContactListItemBinding
 import com.squareup.picasso.Picasso
 
 class ContactRvAdapter(var contactList: List<Contact>):
+
+
     RecyclerView.Adapter<ContactViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
 
@@ -44,6 +46,7 @@ class ContactRvAdapter(var contactList: List<Contact>):
             intent.putExtra("ADDRESS",currentContact.address)
             intent.putExtra("EMAIL", currentContact.email)
             intent.putExtra("PHONENUMBER", currentContact.phoneNumber)
+            intent.putExtra("image",currentContact.image)
             context.startActivity(intent)
         }
     }

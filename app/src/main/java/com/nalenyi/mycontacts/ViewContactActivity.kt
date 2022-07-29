@@ -4,6 +4,7 @@ import android.location.Address
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.Toast
 import com.nalenyi.mycontacts.databinding.ActivityMainBinding
 import com.nalenyi.mycontacts.databinding.ActivityViewContactBinding
@@ -25,16 +26,12 @@ class ViewContactActivity : AppCompatActivity() {
         var phoneNumber = intent.extras?.getString("PHONENUMBER")
 
         Toast.makeText(this,name, Toast.LENGTH_LONG).show()
-
-
         binding.tvname.text=name
         binding.tvLocation.text=address
         binding.tvEmail.text=email
-        binding.tvCalls.text=phoneNumber
+//        binding.tvCalls.text=phoneNumber
 
-        Picasso.get().load(intent.getStringExtra("IMAGE")).resize(200,200).centerCrop().into(binding.imgPerson)
-
-
+        Picasso.get().load(intent.getStringExtra("image")).resize(200,200).centerCrop().into(binding.imgPerson1)
 
     }
 }

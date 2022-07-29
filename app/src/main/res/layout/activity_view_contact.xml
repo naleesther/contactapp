@@ -6,31 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ViewContactActivity">
 
-    <ImageView
-        android:id="@+id/imgPerson"
-        android:layout_width="230dp"
-        android:layout_height="167dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_person_24" />
-
     <TextView
         android:id="@+id/tvname"
         android:layout_width="235dp"
         android:layout_height="46dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:text="name"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.633"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgPerson" />
+        app:layout_constraintTop_toBottomOf="@+id/imgPerson1" />
 
     <ImageView
         android:id="@+id/imgCall"
@@ -59,23 +47,13 @@
         android:layout_width="31dp"
         android:layout_height="33dp"
         android:layout_marginStart="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvCalls"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etPhoneNumber"
+        app:layout_constraintEnd_toStartOf="@+id/etPhoneNumber"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvCalls"
+        app:layout_constraintTop_toTopOf="@+id/etPhoneNumber"
         app:srcCompat="@drawable/ic_baseline_local_phone_24" />
-
-    <TextView
-        android:id="@+id/tvCalls"
-        android:layout_width="144dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="32dp"
-        android:text="Phonenumber"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgCall" />
 
     <ImageView
         android:id="@+id/imgEmail"
@@ -92,13 +70,13 @@
         android:layout_width="142dp"
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:text="Email"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCalls" />
+        app:layout_constraintTop_toBottomOf="@+id/etPhoneNumber" />
 
     <ImageView
         android:id="@+id/imgLocation"
@@ -143,4 +121,30 @@
         android:text="Messages"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgMessage" />
+
+    <ImageView
+        android:id="@+id/imgPerson1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="PhoneNumber"
+        app:layout_constraintBottom_toTopOf="@+id/tvEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessages" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

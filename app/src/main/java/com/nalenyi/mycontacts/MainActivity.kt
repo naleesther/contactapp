@@ -2,6 +2,7 @@ package com.nalenyi.mycontacts
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nalenyi.mycontacts.databinding.ActivityMainBinding
 
